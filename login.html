@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <h1>Registration Page</h1>
+    <div>
+        <lable for="name">First Name: </lable>
+        <input type="text" id="first-name" placeholder="Enter First Name" onkeyup="validateFirstName()">
+        <span id="first-name-error" style="color: red"></span>
+    </div><br>
+    <div>
+        <lable for="name">Last Name: </lable>
+        <input type="text" id="last-name" placeholder="Enter Last Name" onkeyup="validateLastName()">
+        <span id="last-name-error" style="color: red"></span>
+    </div><br>
+    <div>
+        <lable for="number">Phone No.</lable>
+        <input type="tel" id="phone-number" placeholder="Enter Phone No." onkeyup="validatePhone()">
+        <span id="phone-error" style="color: red"></span>
+    </div><br>
+    <div>
+        <lable for="email">Email</lable>
+        <input type="email" id="email" placeholder="Enter Email" onkeyup="validateEmail()">
+        <span id="email-error" style="color: red"></span>
+    </div><br>
+    <div>
+        <lable for="password">Password</lable>
+        <input type="password" id="pwd" placeholder="Enter password" onkeyup="validatePwd()">
+        <span id="pwd-error" style="color: red"></span>
+    </div><br>
+
+    <button onclick="return validateForm()">Submit</button>
+    <span id="submit-error" style="color: red"></span>
+    
+    <script src="index.js"></script>
+</body>
+</html>
