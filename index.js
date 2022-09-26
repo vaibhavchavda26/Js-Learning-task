@@ -96,5 +96,28 @@ function validateForm(){
         setTimeout(function(){submitError.style.display = 'none';}, 3000);
         return false;
     }
-    alert("the information is stored");
+    else{
+        // alert("the information is stored");
+        $(document).on('#submit', function(e){
+            e.preventDefault();
+        
+            $.ajax({
+                type:"POST",
+                url:'/register/',
+                data:{
+                    first_name:$('#first-name').val(),
+                    last_name:$('#last-name').val(),
+                    phone_number:$('#phone-number').val(),
+                    email:$('#email').val(),
+                    password:$('#pwd').val(),
+                },
+                success: function(){
+                    alert("Create New User");
+                }
+            });
+        });
+    }
+        
 }
+
+
